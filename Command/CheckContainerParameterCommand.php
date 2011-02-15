@@ -1,6 +1,10 @@
 <?php
 namespace Xnni\UtilBundle\Command;
 
+if (!class_exists('appDevProjectContainer')) {
+    return;
+}
+
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
@@ -40,6 +44,10 @@ class CheckContainerParameterCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        if (!class_exists('appDevProjectContainer')) {
+            throw new \InvalidArgumentException('This command can be used only in dev environment.');
+        }
+
         $searchParamName = $input->getArgument('param_name');
         $onlyKey         = $input->getOption('only-key', false);
 

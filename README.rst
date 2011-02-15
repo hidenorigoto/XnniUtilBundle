@@ -9,8 +9,8 @@ Utilities.
 Commands
 --------
 
-* util:container-param
-  Dumps
+* util:container-param (parametername)
 
+   Dumps container parameters with specified parameter name.
 
 

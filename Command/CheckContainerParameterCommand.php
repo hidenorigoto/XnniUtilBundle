@@ -39,8 +39,7 @@ class CheckContainerParameterCommand extends Command
     /**
      * @see Command
      *
-     * @throws \InvalidArgumentException When namespace doesn't end with Bundle
-     * @throws \RuntimeException         When bundle can't be executed
+     * @throws \InvalidArgumentException When runs in non-dev environment
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {

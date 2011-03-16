@@ -32,7 +32,7 @@ class CheckContainerParameterCommand extends Command
                 new InputArgument('param_name', InputArgument::REQUIRED, 'parameter name'),
             ))
             ->addOption('only-key', null, InputOption::VALUE_NONE, 'display only key names if set')
-            ->setName('util:container-param')
+            ->setName('container:check-param')
         ;
     }
 

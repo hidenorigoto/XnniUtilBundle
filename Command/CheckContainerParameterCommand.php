@@ -50,15 +50,24 @@ class CheckContainerParameterCommand extends Command
         $searchParamName = $input->getArgument('param_name');
         $onlyKey         = $input->getOption('only-key', false);
 
-        $con = new tempContainer();
+        $tempContainer = new tempContainer();
 
-        $params = $con->getDefaultParams();
+        $params = $tempContainer->getDefaultParams();
+        if ($onlyKey) {
+            $format = '%s';
+        } else {
+            $format = '    <info>%-28s</info>    %s';
+        }
+        ksort($params);
+        $namespace = '';
         foreach ($params as $paramName=>$param) {
             if (false !== strpos($paramName, $searchParamName)) {
-                $output->writeln($paramName);
-                if (false === $onlyKey) {
-                    $output->writeln($param);
+                $parts = explode('.', $paramName);
+                if ($namespace != $parts[0]) {
+                    $namespace = $parts[0];
+                    $output->writeln(sprintf('<comment>%s</comment>', $namespace));
                 }
+                $output->writeln(sprintf($format, str_replace($namespace.'.', '', $paramName), $param));
             }
         }
     }

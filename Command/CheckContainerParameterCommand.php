@@ -1,7 +1,7 @@
 <?php
 namespace Xnni\UtilBundle\Command;
 
-if (!class_exists('appDevProjectContainer')) {
+if (!class_exists('appDevDebugProjectContainer')) {
     return;
 }
 
@@ -12,7 +12,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Output\Output;
 use Symfony\Bundle\FrameworkBundle\Command\Command;
 
-class tempContainer extends \appDevProjectContainer
+class tempContainer extends \appDevDebugProjectContainer
 {
     public function getDefaultParams()
     {
@@ -43,7 +43,7 @@ class CheckContainerParameterCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        if (!class_exists('appDevProjectContainer')) {
+        if (!class_exists('appDevDebugProjectContainer')) {
             throw new \InvalidArgumentException('This command can be used only in dev environment.');
         }
 

@@ -16,7 +16,7 @@ class ListBundlesCommand extends Command
     protected function configure()
     {
         $this
-            ->setName('container:list-bundles')
+            ->setName('bundle:list')
         ;
     }
 

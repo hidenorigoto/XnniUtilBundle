@@ -1,5 +1,5 @@
 <?php
-namespace Xnni\UtilBundle\Controller;
+namespace Xnni\Bundle\UtilBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;

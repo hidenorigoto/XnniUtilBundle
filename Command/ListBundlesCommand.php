@@ -1,5 +1,5 @@
 <?php
-namespace Xnni\UtilBundle\Command;
+namespace Xnni\Bundle\UtilBundle\Command;
 
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
@@ -27,7 +27,7 @@ class ListBundlesCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $kernel = $this->container->get('kernel');
+        $kernel = $this->getContainer()->get('kernel');
         foreach ($kernel->getBundles() as $bundle) {
             $output->writeln($bundle->getName());
         }

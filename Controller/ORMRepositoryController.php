@@ -1,5 +1,5 @@
 <?php
-namespace Xnni\UtilBundle\Controller;
+namespace Xnni\Bundle\UtilBundle\Controller;
 
 class ORMRepositoryController extends ORMController
 {

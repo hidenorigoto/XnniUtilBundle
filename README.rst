@@ -1,6 +1,6 @@
-===============
-Xnni/UtilBundle
-===============
+==============
+XnniUtilBundle
+==============
 
 Utilities for Symfony2 development.
 
@@ -22,8 +22,5 @@ Commands
 TODO
 ----
 
-* generator command for Bundle Extension skelton
 * generator command for Command skelton
-* generator command for Form(Type)
-* magic routing feature Controller/Action
 

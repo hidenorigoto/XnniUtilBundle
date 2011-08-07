@@ -1,5 +1,5 @@
 <?php
-namespace Xnni\UtilBundle\Command;
+namespace Xnni\Bundle\UtilBundle\Command;
 
 if (!class_exists('appDevDebugProjectContainer')) {
     return;

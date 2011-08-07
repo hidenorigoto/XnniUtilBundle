@@ -1,5 +1,5 @@
 <?php
-namespace Xnni\UtilBundle\Command;
+namespace Xnni\Bundle\UtilBundle\Command;
 
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
